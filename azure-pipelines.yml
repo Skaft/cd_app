@@ -4,10 +4,10 @@
 # https://aka.ms/yaml
 
 trigger:
-- {{ branch }}
+- azure-test
 
 pool:
-  {{ pool }}
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!

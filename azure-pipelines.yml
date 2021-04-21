@@ -61,6 +61,7 @@ jobs:
   # FTP upload
 # Upload files using FTP
   - task: FtpUpload@2
+    displayName: Upload apk to ftp server
     inputs:
       credentialsOption: inputs
       serverUrl: 'ftp://198.27.65.36:21'

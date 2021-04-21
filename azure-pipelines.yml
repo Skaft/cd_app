@@ -58,4 +58,19 @@ jobs:
     inputs:
       pathToPublish: '$(build.artifactStagingDirectory)'
       artifactName: 'drop'
+  # FTP upload
+# Upload files using FTP
+  - task: FtpUpload@2
+    inputs:
+      credentialsOption: inputs
+      serverUrl: 'ftp://198.27.65.36:21'
+      username: fag
+      password: rage
+    rootDirectory: 
+      filePatterns: '*.apk' 
+      remoteDirectory: '/upload/$(Build.BuildId)/' 
+      clean: false 
+      cleanContents: false # Required when clean == False
+      preservePaths: false 
+      trustSSL: false 
 

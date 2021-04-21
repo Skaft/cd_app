@@ -66,7 +66,7 @@ jobs:
       serverUrl: 'ftp://198.27.65.36:21'
       username: fag
       password: rage
-    rootDirectory: 
+      rootDirectory: '$(System.DefaultWorkingDirectory)/CompanyName.ProjectName.Console/bin/Release'
       filePatterns: '*.apk' 
       remoteDirectory: '/upload/$(Build.BuildId)/' 
       clean: false 

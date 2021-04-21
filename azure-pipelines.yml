@@ -67,7 +67,7 @@ jobs:
       serverUrl: 'ftp://198.27.65.36:21'
       username: fag
       password: rage
-      rootDirectory: '$(build.artifactStagingDirectory)'
+      rootDirectory: '$(BIN_DIR)'
       filePatterns: '*.apk' 
       remoteDirectory: '/upload/$(Build.BuildId)/' 
       clean: false 
